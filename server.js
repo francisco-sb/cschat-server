@@ -10,11 +10,12 @@ const port = process.env.PORT || 3000
 
 var nicknames = {};
 
-/*app.get('/',function(req, res){
+app.get('/',function(req, res){
 	res.sendFile(__dirname + '/index.html');
+	//console.log('Servidor funcionando');
 });
 
-app.use(express.static(path.join(__dirname, 'public')));*/
+//app.use(express.static(path.join(__dirname, 'public')));
 
 //sockets
 io.sockets.on('connection', function(socket){
@@ -67,7 +68,7 @@ io.sockets.on('connection', function(socket){
 });
 
 server.listen(port, function(){
-	console.log('listening on *: 'port);
+	console.log('listening on *: '+port);
 });
 
 /*
