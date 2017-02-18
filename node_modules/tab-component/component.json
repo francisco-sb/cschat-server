@@ -1,0 +1,30 @@
+{
+  "name": "tabs",
+  "repository": "chemzqm/tabs",
+  "version": "1.0.0",
+  "description": "dynamic tabs component with add, remove and order support",
+  "keywords": [
+    "tabs"
+  ],
+  "demo": "http://chemzqm.github.io/tabs/",
+  "author": "chemzqm@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "component/emitter": "*",
+    "component/domify": "*",
+    "component/classes": "*",
+    "component/events": "*",
+    "chemzqm/sortable": "*"
+  },
+  "development": {
+    "dependencies": {
+      "component/assert": "*"
+    }
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "tabs.css"
+  ]
+}

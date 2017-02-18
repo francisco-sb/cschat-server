@@ -1,0 +1,75 @@
+ul.tabs-header {
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid #DDD;
+}
+
+ul.tabs-header:before,
+ul.tabs-header:after {
+  content: " ";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+ul.tabs-header li {
+  list-style: none;
+  float: left;
+  margin-bottom: -1px;
+  display: block;
+  cursor: pointer;
+  margin-right: 2px;
+  text-indent: 5px;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  padding: 10px 5px;
+  color: #555;
+  background-color: #FFF;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s linear;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul.tabs-header .close {
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 5px 0 15px;
+  visibility: hidden;
+  color: #888;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+ul.tabs-header li:hover .close {
+  cursor: pointer;
+  visibility: visible;
+}
+
+ul.tabs-header li .close:hover {
+  color: black;
+}
+
+.tabs-body .hide {
+  display: none;
+}
+ul.tabs-header li:hover,
+ul.tabs-header li:focus {
+  border-color: #f5f5f5 #f5f5f5 #DDD;
+  background-color: #f5f5f5;
+}
+ul.tabs-header li.active {
+  color: #555;
+  cursor: default;
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+.tabs-body {
+  padding: 20px;
+  font-family: helvetica;
+}

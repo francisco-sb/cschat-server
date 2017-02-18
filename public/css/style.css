@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#login-error{
+  display: none;
+}
+
+#content{
+  height:70%;
+	display: none;
+}
+
+#chatContent{
+	float: left;
+}
+
+#chat{
+	position: relative;
+	width: 100%;
+	float: left;
+	min-height: 100px;
+	height: 90%;
+	overflow: auto;
+	/*height: 400%;
+	overflow-y: auto;*/
+}
+
+#sendMessage{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#users{
+	height: 400%;
+	overflow-y: auto;
+}

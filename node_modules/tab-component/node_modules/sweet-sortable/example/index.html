@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>UI Sortable</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 30px;
+        font-family: 'Helvetica Neue';
+        font-weight: 200;
+      }
+
+      h2 {
+        font-weight: inherit;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 40px 0;
+      }
+
+      ul li {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      li span.handler {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        display: block;
+        width: 40px;
+        height: 38px;
+        line-height: 38px;
+        float: right;
+        text-align: center;
+        margin-right: 10px;
+      }
+
+      li span:before {
+        content: '≡';
+      }
+
+      .numbers {
+        height: 200px;
+      }
+
+      .numbers li {
+        float: left;
+        border: 1px solid #f0f0f0;
+        margin: 8px;
+        width: 38px;
+        text-align: center;
+      }
+      .handle li {
+        position: relative;
+      }
+      .handler {
+        cursor: ns-resize;
+      }
+      [disabled] {
+        opacity: .5;
+      }
+      .sortable-dragging {
+        box-shadow: 0px 1px 2px rgba(34,34,34,0.7)
+      }
+      .sortable-holder {
+        opacity: 0;
+      }
+      .horizon {
+        overflow: hidden;
+        height: 38px;
+      }
+      .horizon > li {
+        float: left;
+      }
+      .horizon:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2 draggable="true">List</h2>
+    <ul id="languages" class='languages'>
+      <li>Javascript</li>
+      <li>Lua</li>
+      <li>Google Go</li>
+      <li>Ruby</li>
+      <li>Python</li>
+    </ul>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+
+    <h2>Disabled items</h2>
+    <ul id="disabled" class='languages'>
+      <li>Javascript</li>
+      <li>Lua</li>
+      <li disabled>Google Go</li>
+      <li>Julia</li>
+    </ul>
+
+    <h2>Handle</h2>
+    <ul class='handle'>
+      <li>Javascript<span class="handler"></span></li>
+      <li>Lua<span class="handler"></span></li>
+      <li>Google Go<span class="handler"></span></li>
+      <li>Julia<span class="handler"></span></li>
+    </ul>
+
+    <h2>connect</h2>
+    <div id="connect">
+      <ul class="public">
+        <li>Javascript</li>
+        <li>Lua</li>
+        <li>Julia</li>
+      </ul>
+      <ul class="private">
+        <li>Google Go</li>
+        <li>go</li>
+        <li>python</li>
+      </ul>
+    </div>
+
+    <h2>Horizon</h2>
+    <ul class='horizon'>
+      <li>Java</li>
+      <li>Lua</li>
+      <li>Go</li>
+      <li>Julia</li>
+      <li>javascript</li>
+    </ul>
+    <script src='./bundle.js'></script>
+  </body>
+</html>

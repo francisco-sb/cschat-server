@@ -1,0 +1,13 @@
+{
+  "name": "chatsocketio",
+  "version": "1.0.0",
+  "description": "Chat para la clase Cliente/Servidor",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.10.2",
+    "mysql": "^2.13.0",
+    "pug": "~2.0.0-beta10",
+    "socket.io": "^1.7.2",
+    "tab-component": "^2.0.5"
+  }
+}
