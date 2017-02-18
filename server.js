@@ -6,6 +6,8 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
+const port = process.env.PORT || 3000
+
 var nicknames = {};
 
 /*app.get('/',function(req, res){
@@ -64,8 +66,8 @@ io.sockets.on('connection', function(socket){
 	});*/
 });
 
-server.listen(3000, function(){
-	console.log('listening on *:3000');
+server.listen(port, function(){
+	console.log('listening on *: 'port);
 });
 
 /*
